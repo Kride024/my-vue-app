@@ -1,5 +1,9 @@
 import { getCartProductFromLS } from "./getCartProductFromLS";
 import { updateCartValue } from "./updateCartValue";
+
+// to get the card data from localStorage
+// to update the cart value and also to get the data always ready from local storage
+
 getCartProductFromLS();
 export const addToCart = (event ,id,stock)=>{
 
