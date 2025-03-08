@@ -17,7 +17,7 @@ let existingProd = arrLocalStorageProduct.find(
 );
 
 if(existingProd && quantity > 1 ){
-    quantity=Number(existingProd.quantity) + quantity;
+    quantity=Number(existingProd.quantity) + Number(quantity);
    price = Number(price * quantity); 
    let updatedCart = { id,quantity,price};
    updatedCart=arrLocalStorageProduct.map((curProd)=>{
