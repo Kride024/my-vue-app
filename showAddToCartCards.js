@@ -30,6 +30,10 @@
         productClone.querySelector(".productImage").src=image;
         
 
+        productClone.querySelector(".productQuantity").textContent = lSActualData.quantity;
+        productClone.querySelector(".productPrice").textContent=lSActualData.price;
+       
+       
         cartElement.appendChild(productClone);
     });
 
