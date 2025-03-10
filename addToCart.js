@@ -5,9 +5,12 @@ import { updateCartValue } from "./updateCartValue";
 // to update the cart value and also to get the data always ready from local storage
 
 getCartProductFromLS();
+
+// to add the data into localStorage
 export const addToCart = (event ,id,stock)=>{
 
-let arrLocalStorageProduct = getCartProductFromLS();
+let arrLocalStorageProduct =getCartProductFromLS() ;
+
 const currentProdElem = document.querySelector(`#card${id}`);
 let quantity = currentProdElem.querySelector(".productQuantity").innerText;
 let price = currentProdElem.querySelector(".productPrice").innerText;

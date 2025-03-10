@@ -7,7 +7,7 @@ if(!cartProducts){
 }
 cartProducts =JSON.parse(cartProducts);
 
-//update the cart button value
+//update the cart butt on value
 updateCartValue(cartProducts);
 return cartProducts;
 };
