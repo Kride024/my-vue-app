@@ -5,11 +5,12 @@ let cartProducts = getCartProductFromLS();
 
 let existingProduct = cartProducts.find((curProd)=>curProd.id == id);
 let quantity =1;
+// let prices=price;
 
 if(existingProduct){
     quantity = existingProduct.quantity;
-    price = existingProduct.price;
+    price =  (quantity* price).toFixed(2);
 }
-return { quantity, price };
+return { quantity, price};
 
 };

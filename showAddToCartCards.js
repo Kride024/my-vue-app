@@ -1,4 +1,5 @@
  import products from "./api/products.json";
+import { fetchQuantityFromCartLS } from "./fetchQuantityFromCartLS";
  import { getCartProductFromLS } from "./getCartProductFromLS";
 
  let cartProducts = getCartProductFromLS();
@@ -9,7 +10,7 @@
 });
 
  console.log(filterProducts);
-
+ 
  //---------------------------
  // to update the addToCart page
  //------------------------------
@@ -44,6 +45,9 @@
  //-----------------------------
 
  showCartProduct();
+
+
+
 
 
 
