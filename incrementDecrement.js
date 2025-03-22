@@ -40,5 +40,18 @@ if(existingProd){
  
 // finally we will update the price in localStorage      
 localStoragePrice = price * quantity;  //actually initially template price
+localStoragePrice = Number(localStoragePrice.toFixed(2)); //toFixed() return string and concatenation start that why have to convert to Number
+
+let updatedCart = { id,quantity,price: localStoragePrice};
+updatedCart=localCartProducts.map((curProd)=>{
+ return (curProd.id===id) ? updatedCart : curProd;   
+});
+//console.log(updatedCart);
+
+localStorage.setItem("cartProductLS", JSON.stringify(updatedCart));
+
+// also we need to reflect the change on the screen too
+productQuantity.innerText = quantity;
+productPrice.innerText = localStoragePrice;
 
 };
