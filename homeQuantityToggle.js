@@ -15,7 +15,7 @@ if(event.target.className === "cartIncrement"){
         alert(`out of stock`);
     }
 
-}
+  }
 
 if((event.target.className === "cartDecrement") ){
   if(quantity > 1){
