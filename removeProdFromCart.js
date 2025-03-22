@@ -1,4 +1,5 @@
 import { getCartProductFromLS } from "./getCartProductFromLS";
+import { updateCartValue } from "./updateCartValue";
 
 export const removeProdFromCart=(id)=>{
  let cartProducts = getCartProductFromLS();

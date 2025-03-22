@@ -59,6 +59,8 @@ import { removeProdFromCart } from "./removeProdFromCart";
 
  showCartProduct();
 
+ updateCartProductTotal();
+
 
 
 
