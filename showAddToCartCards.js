@@ -3,6 +3,7 @@ import { fetchQuantityFromCartLS } from "./fetchQuantityFromCartLS";
  import { getCartProductFromLS } from "./getCartProductFromLS";
 import { incrementDecrement } from "./incrementDecrement";
 import { removeProdFromCart } from "./removeProdFromCart";
+import { updateCartProductTotal } from "./updateCartProductTotal";
 
  let cartProducts = getCartProductFromLS();
 //In filterProduct all value of LS stored
