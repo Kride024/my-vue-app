@@ -1,4 +1,5 @@
 import { getCartProductFromLS } from "./getCartProductFromLS";
+import { updateCartProductTotal } from "./updateCartProductTotal";
 import { updateCartValue } from "./updateCartValue";
 
 // to get the card data from localStorage
@@ -32,7 +33,9 @@ if(existingProd && quantity > 1 ){
    });
    console.log(updatedCart);
    
-   localStorage.setItem("cartProductLS", JSON.stringify(arrLocalStorageProduct));
+   localStorage.setItem("cartProductLS", JSON.stringify(updateCart));
+   // show toast when product added to the cart
+   showToast("add",id);
 }
 
 
@@ -51,4 +54,5 @@ arrLocalStorageProduct.push({id,quantity,stock});
 localStorage.setItem("cartProductLS", JSON.stringify(arrLocalStorageProduct));
 //update the cart button value
 updateCartValue(arrLocalStorageProduct);
+
 };
