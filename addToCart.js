@@ -1,6 +1,7 @@
 import { getCartProductFromLS } from "./getCartProductFromLS";
-import { updateCartProductTotal } from "./updateCartProductTotal";
+import { showToast } from "./showToast";
 import { updateCartValue } from "./updateCartValue";
+
 
 // to get the card data from localStorage
 // to update the cart value and also to get the data always ready from local storage
@@ -34,6 +35,7 @@ if(existingProd && quantity > 1 ){
    console.log(updatedCart);
    
    localStorage.setItem("cartProductLS", JSON.stringify(updateCart));
+
    // show toast when product added to the cart
    showToast("add",id);
 }
@@ -48,11 +50,14 @@ if(existingProd  ){
 price = Number(price * quantity);
 quantity=Number(quantity);
 
-let updateCart = {id,quantity,price};
-arrLocalStorageProduct.push({id,quantity,stock});
+
+arrLocalStorageProduct.push({id,quantity,price});
 
 localStorage.setItem("cartProductLS", JSON.stringify(arrLocalStorageProduct));
 //update the cart button value
 updateCartValue(arrLocalStorageProduct);
+
+ // show toast when product added to the cart
+ showToast("add",id);
 
 };
